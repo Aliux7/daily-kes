@@ -12,6 +12,7 @@ import {
 } from "@/lib/utils/server/task";
 import { EditTask } from "./EditTask";
 import { AddTask } from "./AddTask";
+import getUserCookies from "@/lib/utils/server/server";
 
 interface DndItemListProps {
   isAddFormOpen: boolean;
@@ -52,13 +53,19 @@ const ItemList: React.FC<DndItemListProps> = ({
   const toggleCheck = async (id: string, status: boolean) => {
     updateItemStatus(id, status).then(() => {
       loadItems();
-    })
+    });
   };
 
   const handleEditItem = (item: ItemType) => {
     setCurrentItem(item);
     setIsEditFormOpen(true);
   };
+
+  useEffect(() => {
+    getUserCookies().then((user) => {
+      setEmail(user.email);
+    });
+  }, [loadItems]);
 
   useEffect(() => {
     loadItems();
@@ -100,7 +107,10 @@ const ItemList: React.FC<DndItemListProps> = ({
             }}
             className="relative w-full max-w-screen-sm"
           >
-            <AddTask onTaskUpdated={loadItems} setIsAddFormOpen={setIsAddFormOpen}/>
+            <AddTask
+              onTaskUpdated={loadItems}
+              setIsAddFormOpen={setIsAddFormOpen}
+            />
           </div>
         </div>
       )}
