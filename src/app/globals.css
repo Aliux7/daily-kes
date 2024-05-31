@@ -2,32 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--handle-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-handle-color);
+}
+
+:root {
+  --background-color: #F7F7F3;
+  --card-background-color: #FFF;
+  --off-stroke-color: #a4a4a4;
+  --on-stroke-color: #121212;
+  --hover-color: #f3f4f6;
+  --text-color: #000;
+  --item-color: #FFFFFF;
+  --handle-color: #ddd;
+  --hover-handle-color: #bbb;
+}
+
+.dark {
+  --background-color: #121212;
+  --card-background-color: #0F0F0F;
+  --off-stroke-color: #a4a4a4;
+  --on-stroke-color: #FAFAFA;
+  --hover-color: #111827;
+  --text-color: #FFF;
+  --item-color: #222222;
+  --handle-color: #333;
+  --hover-handle-color: #555;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  background: var(--background-color);
+  font-family: var(--font-inter);
 }
