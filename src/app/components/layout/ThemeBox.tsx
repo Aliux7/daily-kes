@@ -38,7 +38,7 @@ const ThemeBox = () => {
   };
 
   return (
-    <div className="fixed h-full w-auto right-5 z-[70] flex justify-center items-start sm:items-center top-5 sm:top-0">
+    <div className="fixed h-fit sm:h-full w-auto right-5 z-[70] flex justify-center items-start sm:items-center top-5 sm:top-0">
       <div className="flex flex-row sm:flex-col justify-center items-center text-center gap-2 sm:w-12 bg-[var(--background-color)] border border-gray-100 dark:border-gray-900 shadow-inner shadow-lg dark:shadow-gray-900 rounded-xl p-1 sm:p-3">
         <div className="text-[var(--off-stroke-color)] hover:cursor-pointer hover:bg-[var(--hover-color)] rounded-lg p-1">
           <AnimatedTooltip />

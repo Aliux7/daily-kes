@@ -13,27 +13,27 @@ import Header from "./components/layout/Header";
 
 export default function Home() {
   const sections = [
-    {
-      title: "Portofolio",
-      icon: (
-        <IconChartPieFilled className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
-      ),
-      href: "/portofolio",
-    },
-    {
-      title: "Trading",
-      icon: (
-        <IconChartBar className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
-      ),
-      href: "/trading",
-    },
-    {
-      title: "Cash Flow",
-      icon: (
-        <IconBrandCashapp className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
-      ),
-      href: "/cash-flow",
-    },
+    // {
+    //   title: "Portofolio",
+    //   icon: (
+    //     <IconChartPieFilled className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
+    //   ),
+    //   href: "/portofolio",
+    // },
+    // {
+    //   title: "Trading",
+    //   icon: (
+    //     <IconChartBar className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
+    //   ),
+    //   href: "/trading",
+    // },
+    // {
+    //   title: "Cash Flow",
+    //   icon: (
+    //     <IconBrandCashapp className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
+    //   ),
+    //   href: "/cash-flow",
+    // },
     {
       title: "To Do List",
       icon: (
@@ -42,11 +42,11 @@ export default function Home() {
       href: "/to-do-list",
     },
     {
-      title: "Notes",
+      title: "Coming Soon",
       icon: (
         <IconClipboardCheck className="h-20 w-20 text-neutral-700 dark:text-neutral-300" />
       ),
-      href: "/notes",
+      href: "#",
     },
   ];
 
